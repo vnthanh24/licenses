@@ -1,0 +1,11 @@
+{
+  "hwid": "C75F-4778-0BA7-4437",
+  "user_name": "Thanh",
+  "expiry_date": "2025-11-28T23:59:59Z",
+  "license_type": "Train 3 days",
+  "max_computers": 1,
+  "features": ["basic", "advanced"],
+  "active": true,
+  "maintenance_mode": false,
+  "message": ""
+}
