@@ -1,6 +1,6 @@
 {
-  "version": "1.0.0",
-  "downloadUrl": "https://www.dropbox.com/scl/fi/ev2rhcauld1dwn00w9sev/1.0.0.zip?rlkey=7xyo9gn6xwsd1ietvx5m3gr5r&st=vpg7mh5s&dl=1",
+  "version": "1.0.1",
+  "downloadUrl": "https://www.dropbox.com/scl/fi/y3jznz1t0pgrltfnhn3ry/1.0.1.zip?rlkey=zq27jvag01dparqv5vf45qh5w&dl=1",
   "changeLog": "- Initial release\n- NPC Shop Preview with drag-drop\n- NPC Shop Trade with group swap\n- Item Trade with group swap\n- Auto update checker",
   "releaseDate": "2025-11-28T00:00:00Z"
 }
