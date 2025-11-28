@@ -1,6 +1,6 @@
 {
-  "version": "1.0.3",
-  "downloadUrl": "https://www.dropbox.com/scl/fi/fhh4gdj9blu6z0hwznh2z/1.0.3.zip?rlkey=n097dy6fx2xlr5fotsgu9onil&dl=1",
-  "changeLog": "- Initial release\n- NPC Shop Preview with drag-drop\n- NPC Shop Trade with group swap\n- Item Trade with group swap\n- Auto update checker",
-  "releaseDate": "2025-11-28T00:00:00Z"
+  "version": "1.0.4",
+  "downloadUrl": "https://www.dropbox.com/scl/fi/6z3jhzi1mqivzqqaisbc6/1.0.4.zip?rlkey=vbs6q893ooctoyl0qzudys6l4&dl=1",
+  "changeLog": "- Tối ưu hiệu năng ứng dụng",
+  "releaseDate": "2025-11-28T19:35:00Z"
 }
