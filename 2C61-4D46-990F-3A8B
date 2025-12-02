@@ -1,0 +1,11 @@
+{
+  "hwid": "2C61-4D46-990F-3A8B",
+  "user_name": "Tru Tiên Free",
+  "expiry_date": "2026-12-1T23:59:59Z",
+  "license_type": "Premium",
+  "max_computers": 1,
+  "features": ["basic", "advanced"],
+  "active": true,
+  "maintenance_mode": false,
+  "message": ""
+}
