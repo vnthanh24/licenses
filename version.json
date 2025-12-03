@@ -1,6 +1,6 @@
 {
-  "version": "1.0.7",
-  "downloadUrl": "https://www.dropbox.com/scl/fi/4lie4f01tnasess5zqsi4/1.0.7.zip?rlkey=dmooppsmiyfphgwucybq5oncx&dl=1",
+  "version": "1.1.0",
+  "downloadUrl": "https://www.dropbox.com/scl/fi/kpdhxziyx6gdplnt66v9n/1.1.0.zip?rlkey=xddn457ulai3k3we117y28bkf&dl=1",
   "changeLog": "- Sửa lỗi không thể thay đổi dữ liệu trực tiếp sau khi tìm kiếm.\r- Tối ưu load dữ liệu các Bảng có dữ liệu hớn bằng phương pháp LoadLazy.\r- Nhảy đến Bảng gốc sau khi seach đã được tích hợp và Menu chuột phải.\r- Tối ưu hiệu suất của ứng dụng.",
   "releaseDate": "2025-12-2T21:35:00Z"
 }
