@@ -1,0 +1,11 @@
+{
+  "hwid": "4EC0-E31D-9432-1D32",
+  "user_name": "Thanh Nguyen Admin",
+  "expiry_date": "2026-12-28T23:59:59Z",
+  "license_type": "Premium",
+  "max_computers": 1,
+  "features": ["basic", "advanced"],
+  "active": true,
+  "maintenance_mode": false,
+  "message": ""
+}
