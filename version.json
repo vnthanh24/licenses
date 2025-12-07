@@ -1,6 +1,6 @@
 {
   "version": "1.1.2",
   "downloadUrl": "https://www.dropbox.com/scl/fi/eo1kk17vw3pq8cydfyy3h/1.1.2.zip?rlkey=sbdyu774fbvpsdoha1z45lqsa&dl=1",
-  "changeLog": "- Initial release\n- NPC Shop Preview with drag-drop\n- NPC Shop Trade with group swap\n- Item Trade with group swap\n- Auto update checker",
+  "changeLog": "- Fix lỗi mất String 1 số table.\r- Fix lỗi Seach.",
   "releaseDate": "2025-12-07T00:00:00Z"
 }
