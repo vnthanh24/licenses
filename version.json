@@ -1,6 +1,6 @@
 {
   "version": "1.1.1",
-  "downloadUrl":"https://www.dropbox.com/scl/fi/u3jmhpi6nate48yf6filb/1.1.1.zip?rlkey=s6gsh4iwqgjqgp9whjsafy8a6&dl=1",
-  "changeLog": "- Sửa lỗi không thể thay đổi dữ liệu trực tiếp sau khi tìm kiếm.\r- Tối ưu load dữ liệu các Bảng có dữ liệu hớn bằng phương pháp LoadLazy.\r- Nhảy đến Bảng gốc sau khi seach đã được tích hợp và Menu chuột phải.\r- Tối ưu hiệu suất của ứng dụng.",
-  "releaseDate": "2025-12-2T21:35:00Z"
+  "downloadUrl":"https://www.dropbox.com/scl/fi/eo1kk17vw3pq8cydfyy3h/1.1.2.zip?rlkey=sbdyu774fbvpsdoha1z45lqsa&dl=1",
+  "changeLog": "- Fix lỗi mất String của bảng dữ liệu.\r- Fix lỗi load dữ liệu của Record gây ảnh hưởng đến tính năng Seach",
+  "releaseDate": "2025-12-7T8:00:00Z"
 }
