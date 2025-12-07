@@ -1,6 +1,6 @@
 {
   "version": "1.1.2",
   "downloadUrl":"https://www.dropbox.com/scl/fi/eo1kk17vw3pq8cydfyy3h/1.1.2.zip?rlkey=sbdyu774fbvpsdoha1z45lqsa&dl=1",
-  "changeLog": "- Fix lỗi mất String của bảng dữ liệu.\r- Fix lỗi load dữ liệu của Record gây ảnh hưởng đến tính năng Seach",
+  "changeLog": "- Fix lỗi mất String của bảng dữ liệu.",
   "releaseDate": "2025-12-07T08:00:00Z"
 }
