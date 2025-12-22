@@ -1,6 +1,6 @@
 {
-  "version": "1.1.7",
-  "downloadUrl": "https://www.dropbox.com/scl/fi/cj2n4ps28irvs47617pix/1.1.7.zip?rlkey=wqbstkhy0p9aaadq87kbhm2em&dl=1",
-  "changeLog": "- Tối ưu ứng dụng",
-  "releaseDate": "2025-12-21T20:00:00Z"
+  "version": "1.1.8",
+  "downloadUrl": "https://www.dropbox.com/scl/fi/2neupktnsrfkt0z4hp4mi/1.1.8.zip?rlkey=vkqr5n6dho80tk12x3d1onpcm&dl=1",
+  "changeLog": "- Fix lỗi Int64, Thêm tính năng Multi-Inport Text Files",
+  "releaseDate": "2025-12-22T16:00:00Z"
 }
