@@ -1,6 +1,6 @@
 {
-  "version": "1.1.9",
-  "downloadUrl": "https://www.dropbox.com/scl/fi/qwpfjr3y0ak3xrmhcw7s4/1.1.9.zip?rlkey=tr7gusxrykimsbo0dy50smgt3&dl=1",
-  "changeLog": "- Fix lỗi Int64, Thêm tính năng Multi-Import Text Files",
-  "releaseDate": "2025-12-23T21:00:00Z"
+  "version": "1.2.0",
+  "downloadUrl": "https://www.dropbox.com/scl/fi/lwitlqgvksvjmiqu1ylfa/1.2.0.zip?rlkey=zmfj0xq2vf1yx0xarj77b8u7e&dl=1",
+  "changeLog": "- Thêm tủy chọn điều chỉnh thuộc tính của Sách",
+  "releaseDate": "2025-12-24T10:00:00Z"
 }
