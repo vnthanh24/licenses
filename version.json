@@ -1,6 +1,6 @@
 {
-  "version": "1.2.0",
-  "downloadUrl": "https://www.dropbox.com/scl/fi/lwitlqgvksvjmiqu1ylfa/1.2.0.zip?rlkey=zmfj0xq2vf1yx0xarj77b8u7e&dl=1",
-  "changeLog": "- Thêm tủy chọn điều chỉnh thuộc tính của Sách",
-  "releaseDate": "2025-12-24T12:00:00Z"
+  "version": "1.2.1",
+  "downloadUrl": "https://www.dropbox.com/scl/fi/duj0r4lzfu09e4px4tbnf/1.2.1.zip?rlkey=x6v9s4ternr27kvst1zfc2dlr&dl=1",
+  "changeLog": "- Fix một số lỗi liên quan đến sao lưu và save, sửa lỗi DropControl Table 19.",
+  "releaseDate": "2025-12-28T01:00:00Z"
 }
