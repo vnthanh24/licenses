@@ -1,6 +1,6 @@
 {
-  "version": "1.2.1",
-  "downloadUrl": "https://www.dropbox.com/scl/fi/duj0r4lzfu09e4px4tbnf/1.2.1.zip?rlkey=x6v9s4ternr27kvst1zfc2dlr&dl=1",
+  "version": "1.2.2",
+  "downloadUrl": "https://www.dropbox.com/scl/fi/cxaxlssbghskaly535573/1.2.2.zip?rlkey=7ppolizrx9tyrzbcxsh62dfgs&dl=1",
   "changeLog": "- Fix một số lỗi liên quan đến sao lưu và save, sửa lỗi DropControl Table 19.",
-  "releaseDate": "2025-12-28T01:00:00Z"
+  "releaseDate": "2026-1-10T16:00:00Z"
 }
