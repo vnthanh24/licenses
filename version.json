@@ -1,6 +1,6 @@
 {
-  "version": "1.2.2",
-  "downloadUrl": "https://www.dropbox.com/scl/fi/cxaxlssbghskaly535573/1.2.2.zip?rlkey=7ppolizrx9tyrzbcxsh62dfgs&dl=1",
-  "changeLog": "- Fix một số lỗi liên quan đến sao lưu và save, sửa lỗi DropControl Table 19.",
-  "releaseDate": "2026-1-10T16:00:00Z"
+  "version": "1.2.3",
+  "downloadUrl": "https://www.dropbox.com/scl/fi/024cw0ffd5tgggg9pdfa0/1.2.3.zip?rlkey=r72zlc6ov2yxhl62utjaj6wc1&st=dgongmpf&dl=1",
+  "changeLog": "- Cải tiến hiệu năng và bổ sung tính năng.",
+  "releaseDate": "2026-1-23T17:00:00Z"
 }
