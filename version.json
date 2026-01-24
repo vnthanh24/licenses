@@ -1,6 +1,6 @@
 {
-  "version": "1.2.3",
-  "downloadUrl": "https://www.dropbox.com/scl/fi/024cw0ffd5tgggg9pdfa0/1.2.3.zip?rlkey=r72zlc6ov2yxhl62utjaj6wc1&st=dgongmpf&dl=1",
-  "changeLog": "- Cải tiến hiệu năng và bổ sung tính năng.",
-  "releaseDate": "2026-1-23T17:00:00Z"
+  "version": "1.2.4",
+  "downloadUrl": "https://www.dropbox.com/scl/fi/0znk4i0714ixiu2qarghq/1.2.4.zip?rlkey=09ye65zed1y5m3tvk1t188qx1&st=g54o2qub&dl=1",
+  "changeLog": "- Sử lỗi gây hỏng data khi điều chỉnh Drop quái",
+  "releaseDate": "2026-1-24T17:00:00Z"
 }
