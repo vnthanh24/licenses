@@ -1,6 +1,6 @@
 {
-  "version": "1.2.4",
-  "downloadUrl": "https://www.dropbox.com/scl/fi/0znk4i0714ixiu2qarghq/1.2.4.zip?rlkey=09ye65zed1y5m3tvk1t188qx1&st=g54o2qub&dl=1",
-  "changeLog": "- Sử lỗi gây hỏng data khi điều chỉnh Drop quái",
-  "releaseDate": "2026-1-24T17:00:00Z"
+  "version": "1.2.5",
+  "downloadUrl": "https://www.dropbox.com/scl/fi/a9lfmxk1wigqba89mrn3u/1.2.5.zip?rlkey=8kb2pj23nh6zzmp22s599m883&st=fqusvwhy&dl=1",
+  "changeLog": "- Bổ sung tính năng FullLoad trong Mode để phù hợp hơn trong chỉnh sửa. \r- Cải thiện giao diện và hiệu suất",
+  "releaseDate": "2026-2-4T17:00:00Z"
 }
