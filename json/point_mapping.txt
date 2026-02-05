@@ -1,0 +1,40 @@
+[Point]
+-1	Không sử dụng
+1	Quỷ đạo cống hiến
+2	thanh vân cống hiến
+3	thiên âm cống hiến
+4	quỷ vương cống hiến
+5	hợp hoan cống hiến
+6	trung nghĩa
+7	tình duyên
+8	văn thái
+9	sư đồ
+10	tiên
+11	ma
+12	phật
+13	Cela Affinity
+14	Cửu lê cống hiến
+15	liệt sơn  cống hiến
+16	thần hoàng cống hiến
+17	thái hạo cống hiến
+18	hoài quang cống hiến
+19	thiên hoa cống hiến
+20	phần hương cống hiến
+21	chiến tích
+22	võ huân
+23	xếp hạng thiên tông
+24	xếp hạng địa tông
+25	xếp hạng nhân tông
+26	xếp hạng thiên tông
+27	xếp hạng địa tông
+28	xếp hạng nhân tông
+29	quốc chiến cống hiến
+30	bang hội danh vọng
+31	khiên cơ cống hiến
+32	anh chiêu cống hiến
+33	phá quân cống hiến
+34	tình cảm
+35	thanh la danh vọng
+36	quy vân cống hiến
+37	Thành tựu web
+38	Chiến tích web
