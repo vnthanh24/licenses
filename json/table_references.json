@@ -1,0 +1,128 @@
+{
+  "_comment": "Định nghĩa field nào lookup Name từ table nào dựa trên ID",
+  
+  "table_references": {
+    "19": {
+      "name": "DROPTABLE_ESSENCE",
+      "description": "Drop table - có thể drop items từ bất kỳ item table nào",
+      "field_mappings": {
+        "Item_ID": [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 54]
+      }
+    },
+    "21": {
+      "name": "MONSTER_ESSENCE",
+      "description": "Monster - references đến drop tables",
+      "field_mappings": {
+        "Drop_Table_1": [19],
+        "Drop_Table_2": [19],
+        "Drop_Table_3": [19]
+      }
+    },
+    "24": {
+      "name": "NPC_SELL_SERVICE",
+      "description": "NPC shop - có thể bán items từ bất kỳ item table nào",
+      "field_mappings": {
+        "ID_Goods": [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 54]
+      }
+    },
+    "34": {
+      "name": "NPC_ESSENCE",
+      "description": "NPC - references đến shop/trade tables",
+      "field_mappings": {
+        "Shop": [24],
+        "Exchange_1_*": [95],
+        "Exchange_2_*": [221]
+      }
+    },
+    "37": {
+      "name": "RECIPE_ESSENCE",
+      "description": "Recipe - có thể craft/require items từ bất kỳ item table nào",
+      "field_mappings": {
+        "Material_*": [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+      }
+    },
+    "45": {
+      "name": "MINE_ESSENCE",
+      "description": "Mine - có thể require materials từ bất kỳ item table nào",
+      "field_mappings": {
+        "Materials_*_ID": [3,6,9,10,17,42,43,53,54,58,68,105,127,202,203,212,236,251,165,166]
+      }
+    },
+    "58": {
+      "name": "TASKDICE_ESSENCE",
+      "description": "Task dice - references recipes",
+      "field_mappings": {
+        "Recipe_ID": [37]
+      }
+    },
+    "95": {
+      "name": "NPC_TRADE_SERVICE",
+      "description": "NPC trade - có thể trade items từ bất kỳ item table nào",
+      "field_mappings": {
+        "Item_Giving_*": [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18],
+        "Item_Getting_*": [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+      }
+    },
+    "98": {
+      "name": "EQUIP_SOUL_MELD_SERVICE",
+      "description": "Equipment soul meld service - references recipes",
+      "field_mappings": {
+        "Prescription_*": [37]
+      }
+    },
+    "212": {
+      "name": "TALENT_SCROLL_ESSENCE",
+      "description": "Talent scroll essence - Talent_Scroll_Config is skill/faction ID, not item ID",
+      "field_mappings": {
+        "Decomposion_ID": [213, 214],
+        "Refine_ID": [234]
+      }
+    },
+    "213": {
+      "name": "TALENT_SCROLL_CONFIG",
+      "description": "Thuộc tính sách",
+      "field_mappings": {
+        "Profession_Addon_Skill_*": [214]
+      }
+    },
+    "221": {
+      "name": "ITEM_TRADE",
+      "description": "Item trade - có thể trade items từ bất kỳ item table nào",
+      "field_mappings": {
+        "Item_Giving": [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18],
+        "Item_Getting": [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+      }
+    },
+    "229": {
+      "name": "DAILY_SIGN_CONFIG",
+      "description": "Daily sign config - phần thưởng điểm danh hàng ngày",
+      "field_mappings": {
+        "Awards_*_ID": [3,6,9,10,17,42,43,53,54,58,68,105,127,202,203,212,236,251,165,166]
+      }
+    }
+  },
+  
+  "item_tables": [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 43, 45, 54],
+  
+  "item_table_names": {
+    "3": "WEAPON_ESSENCE",
+    "4": "ARMOR_ESSENCE",
+    "5": "DECORATION_ESSENCE",
+    "6": "MEDICINE_MAJOR_TYPE",
+    "7": "MEDICINE_SUB_TYPE",
+    "8": "MATERIAL_MAJOR_TYPE",
+    "9": "MATERIAL_SUB_TYPE",
+    "10": "DAMAGERUNE_ESSENCE",
+    "11": "ARMORRUNE_ESSENCE",
+    "12": "SKILLTOME_ESSENCE",
+    "13": "FLYSWORD_ESSENCE",
+    "14": "WINGMANWING_ESSENCE",
+    "15": "TOWNSCROLL_ESSENCE",
+    "16": "UNIONSCROLL_ESSENCE",
+    "17": "REVIVESCROLL_ESSENCE",
+    "18": "ELEMENT_ESSENCE",
+    "43": "TASKNORMALMATTER_ESSENCE",
+    "45": "MINE_ESSENCE",
+    "54": "PSTONE_ESSENCE"
+  }
+}
