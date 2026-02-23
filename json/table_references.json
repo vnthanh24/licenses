@@ -6,7 +6,7 @@
       "name": "DROPTABLE_ESSENCE",
       "description": "Drop table - có thể drop items từ bất kỳ item table nào",
       "field_mappings": {
-        "Item_ID": [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 54]
+        "Item_ID": [3,6,9,10,17,42,43,53,54,58,68,105,127,202,203,212,236,251,165,166, 54]
       }
     },
     "21": {
@@ -22,7 +22,7 @@
       "name": "NPC_SELL_SERVICE",
       "description": "NPC shop - có thể bán items từ bất kỳ item table nào",
       "field_mappings": {
-        "ID_Goods": [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 54]
+        "ID_Goods": [3,6,9,10,17,42,43,53,54,58,68,105,127,202,203,212,236,251,165,166]
       }
     },
     "34": {
@@ -38,7 +38,7 @@
       "name": "RECIPE_ESSENCE",
       "description": "Recipe - có thể craft/require items từ bất kỳ item table nào",
       "field_mappings": {
-        "Material_*": [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+        "Material_*": [3,6,9,10,17,42,43,53,54,58,68,105,127,202,203,212,236,251,165,166]
       }
     },
     "45": {
@@ -59,8 +59,8 @@
       "name": "NPC_TRADE_SERVICE",
       "description": "NPC trade - có thể trade items từ bất kỳ item table nào",
       "field_mappings": {
-        "Item_Giving_*": [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18],
-        "Item_Getting_*": [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+        "Item_Giving_*": [3,6,9,10,17,42,43,53,54,58,68,105,127,202,203,212,236,251,165,166],
+        "Item_Getting_*": [3,6,9,10,17,42,43,53,54,58,68,105,127,202,203,212,236,251,165,166]
       }
     },
     "98": {
@@ -89,8 +89,8 @@
       "name": "ITEM_TRADE",
       "description": "Item trade - có thể trade items từ bất kỳ item table nào",
       "field_mappings": {
-        "Item_Giving": [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18],
-        "Item_Getting": [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+        "Item_Giving": [3,6,9,10,17,42,43,53,54,58,68,105,127,202,203,212,236,251,165,166],
+        "Item_Getting": [3,6,9,10,17,42,43,53,54,58,68,105,127,202,203,212,236,251,165,166]
       }
     },
     "229": {
@@ -99,10 +99,17 @@
       "field_mappings": {
         "Awards_*_ID": [3,6,9,10,17,42,43,53,54,58,68,105,127,202,203,212,236,251,165,166]
       }
+    },
+    "123": {
+      "name": "Table 123",
+      "description": "Lookname: Canididates_*_Icon là itemId của vật phẩm",
+      "field_mappings": {
+        "Canididates_*_Icon": [3,6,9,10,17,42,43,53,54,58,68,105,127,202,203,212,236,251,165,166]
+      }
     }
   },
   
-  "item_tables": [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 43, 45, 54],
+  "item_tables": [3,6,9,10,17,42,43,53,54,58,68,105,127,202,203,212,236,251,165,166],
   
   "item_table_names": {
     "3": "WEAPON_ESSENCE",
