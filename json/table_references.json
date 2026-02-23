@@ -153,7 +153,7 @@
       "name": "Table 124",
       "description": "Lookname: Gem_ID_*_Ordinary_Gem_ID là itemId của vật phẩm",
       "field_mappings": {
-        "Gem_ID_*_Ordinary_Gem_ID": [3,6,9,10,17,42,43,53,54,58,68,105,127,202,203,212,236,251,165,166]
+        "Gem_ID_*_Ordinary_Gem_ID": [125]
       }
     },
     "132": {
@@ -182,8 +182,8 @@
       "name": "Table 159",
       "description": "Lookname: Element_List_*_Award_Item_* và Element_List_*_Condition_Arg_* là itemId của vật phẩm",
       "field_mappings": {
-        "Element_List_*_Award_Item_*": [3,6,9,10,17,42,43,53,54,58,68,105,127,202,203,212,236,251,165,166],
-        "Element_List_*_Condition_Arg_*": [3,6,9,10,17,42,43,53,54,58,68,105,127,202,203,212,236,251,165,166]
+        "Element_List_*_Award_Item_1": [3,6,9,10,17,42,43,53,54,58,68,105,127,202,203,212,236,251,165,166],
+        "Element_List_*_Condition_Arg_1": [3,6,9,10,17,42,43,53,54,58,68,105,127,202,203,212,236,251,165,166]
       }
     }
   },
