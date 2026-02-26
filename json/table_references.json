@@ -85,6 +85,13 @@
         "Profession_Addon_Skill_*": [214]
       }
     },
+    "217": {
+      "name": "Table 217",
+      "description": "Lookname: Consume_Award_lnfo_*_Award_Item_lnfo_*_ltem_lD là itemId của vật phẩm",
+      "field_mappings": {
+        "Consume_Award_lnfo_*_Award_Item_lnfo_*_ltem_lD": [3,6,9,10,17,42,43,53,54,58,68,105,127,202,203,212,236,251,165,166]
+      }
+    },
     "221": {
       "name": "ITEM_TRADE",
       "description": "Item trade - có thể trade items từ bất kỳ item table nào",
