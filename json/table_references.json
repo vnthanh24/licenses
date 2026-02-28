@@ -2,7 +2,6 @@
   "_comment": "Định nghĩa field nào lookup Name từ table nào dựa trên ID - Sử dụng Table Name thay vì ID",
 
   "presets": {
-    "_comment_items": "Các preset danh sách item tables - sử dụng @preset_name trong field_mappings",
     "all_items": [
       "EQUIPMENT_ESSENCE",
       "MEDICINE_SUB_TYPE",
