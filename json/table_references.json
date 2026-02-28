@@ -1,304 +1,210 @@
 {
   "_comment": "Định nghĩa field nào lookup Name từ table nào dựa trên ID - Sử dụng Table Name thay vì ID",
-  
-  "_id_to_name_mapping": {
-    "3": "EQUIPMENT_ESSENCE",
-    "4": "ARMOR_ESSENCE",
-    "5": "DECORATION_ESSENCE",
-    "6": "MEDICINE_MAJOR_TYPE",
-    "7": "MEDICINE_SUB_TYPE",
-    "8": "MATERIAL_MAJOR_TYPE",
-    "9": "MATERIAL_SUB_TYPE",
-    "10": "DAMAGERUNE_ESSENCE",
-    "11": "ARMORRUNE_ESSENCE",
-    "12": "SKILLTOME_ESSENCE",
-    "13": "FLYSWORD_ESSENCE",
-    "14": "WINGMANWING_ESSENCE",
-    "15": "TOWNSCROLL_ESSENCE",
-    "16": "UNIONSCROLL_ESSENCE",
-    "17": "REVIVESCROLL_ESSENCE",
-    "18": "ELEMENT_ESSENCE",
-    "19": "DROPTABLE_ESSENCE",
-    "21": "MONSTER_ESSENCE",
-    "24": "NPC_SELL_SERVICE",
-    "34": "NPC_ESSENCE",
-    "37": "RECIPE_ESSENCE",
-    "42": "QUESTITEM_ESSENCE",
-    "43": "TASKNORMALMATTER_ESSENCE",
-    "45": "MINE_ESSENCE",
-    "53": "GUILDITEM_ESSENCE",
-    "54": "PSTONE_ESSENCE",
-    "58": "TASKDICE_ESSENCE",
-    "59": "Table_59",
-    "68": "Table_68",
-    "70": "Table_70",
-    "95": "NPC_TRADE_SERVICE",
-    "98": "EQUIP_SOUL_MELD_SERVICE",
-    "100": "Table_100",
-    "105": "FASHION_ESSENCE",
-    "113": "Table_113",
-    "118": "UPGRADE_EQUIP_CONFIG",
-    "123": "Table_123",
-    "124": "Table_124",
-    "125": "GEM_ESSENCE",
-    "127": "AWARD_ESSENCE",
-    "130": "Table_130",
-    "132": "Table_132",
-    "154": "Table_154",
-    "155": "Table_155",
-    "159": "Table_159",
-    "160": "Table_160",
-    "161": "Table_161",
-    "165": "RITUAL_ESSENCE",
-    "166": "QUESTV2_ESSENCE",
-    "175": "Table_175",
-    "202": "MOUNT_ESSENCE",
-    "203": "PET_ESSENCE",
-    "212": "TALENT_SCROLL_ESSENCE",
-    "213": "TALENT_SCROLL_CONFIG",
-    "214": "TALENT_SCROLL_SKILL",
-    "218": "MULTI_TOWER_CONFIG",
-    "221": "ITEM_TRADE",
-    "229": "DAILY_SIGN_CONFIG",
-    "234": "REFINE_ESSENCE",
-    "236": "GACHE_ESSENCE",
-    "251": "CARD_ESSENCE"
-  },
-
-  "presets": {
-    "_comment_items": "Các preset danh sách item tables - sử dụng @preset_name trong field_mappings",
-    "all_items": [
-      "EQUIPMENT_ESSENCE",
-      "MEDICINE_SUB_TYPE",
-      "MATERIAL_SUB_TYPE",
-      "DAMAGERUNE_ESSENCE",
-      "REVIVESCROLL_ESSENCE",
-      "TASKNORMALMATTER_ESSENCE",
-      "MINE_ESSENCE",
-      "PSTONE_ESSENCE",
-      "TASKDICE_ESSENCE",
-      "FASHION_ESSENCE",
-      "AWARD_ESSENCE",
-      "TALENT_SCROLL_ESSENCE",
-      "PET_ESSENCE",
-      "GACHE_ESSENCE",
-      "RITUAL_ESSENCE",
-      "QUESTV2_ESSENCE"
-    ],
-    "recipes_only": ["RECIPE_ESSENCE"],
-    "equipment_only": ["EQUIPMENT_ESSENCE"],
-    "gems_only": ["GEM_ESSENCE"],
-    "drop_table_only": ["DROPTABLE_ESSENCE"],
-    "npc_shop_only": ["NPC_SELL_SERVICE"],
-    "npc_trade_only": ["NPC_TRADE_SERVICE"],
-    "talent_scroll_items": ["TALENT_SCROLL_CONFIG", "TALENT_SCROLL_SKILL"],
-    "refine_only": ["REFINE_ESSENCE"]
-  },
 
   "table_references": {
     "19": {
       "name": "DROPTABLE_ESSENCE",
       "description": "Drop table - có thể drop items từ bất kỳ item table nào",
       "field_mappings": {
-        "Item_ID": "@all_items"
+        "Item_ID": ["EQUIPMENT_ESSENCE","MEDICINE_SUB_TYPE","MATERIAL_SUB_TYPE","DAMAGERUNE_ESSENCE","REVIVESCROLL_ESSENCE","TASKNORMALMATTER_ESSENCE","MINE_ESSENCE","PSTONE_ESSENCE","TASKDICE_ESSENCE","FASHION_ESSENCE","AWARD_ESSENCE","TALENT_SCROLL_ESSENCE","PET_ESSENCE","GACHE_ESSENCE","RITUAL_ESSENCE","QUESTV2_ESSENCE"]
       }
     },
     "21": {
       "name": "MONSTER_ESSENCE",
       "description": "Monster - references đến drop tables",
       "field_mappings": {
-        "Drop_Table_1": "@drop_table_only",
-        "Drop_Table_2": "@drop_table_only",
-        "Drop_Table_3": "@drop_table_only"
+        "Drop_Table_1": ["DROPTABLE_ESSENCE"],
+        "Drop_Table_2": ["DROPTABLE_ESSENCE"],
+        "Drop_Table_3": ["DROPTABLE_ESSENCE"]
       }
     },
     "24": {
       "name": "NPC_SELL_SERVICE",
       "description": "NPC shop - có thể bán items từ bất kỳ item table nào",
       "field_mappings": {
-        "*_ID_Goods_*": "@all_items"
+        "*_ID_Goods_*": ["EQUIPMENT_ESSENCE","MEDICINE_SUB_TYPE","MATERIAL_SUB_TYPE","DAMAGERUNE_ESSENCE","REVIVESCROLL_ESSENCE","TASKNORMALMATTER_ESSENCE","MINE_ESSENCE","PSTONE_ESSENCE","TASKDICE_ESSENCE","FASHION_ESSENCE","AWARD_ESSENCE","TALENT_SCROLL_ESSENCE","PET_ESSENCE","GACHE_ESSENCE","RITUAL_ESSENCE","QUESTV2_ESSENCE"]
       }
     },
     "34": {
       "name": "NPC_ESSENCE",
       "description": "NPC - references đến shop/trade tables",
       "field_mappings": {
-        "Shop": "@npc_shop_only",
-        "Exchange_1_*": "@npc_trade_only",
-        "Exchange_2_*": "@item_trade_only"
+        "Shop": ["NPC_SELL_SERVICE"],
+        "Exchange_1_*": ["NPC_TRADE_SERVICE"],
+        "Exchange_2_*": ["ITEM_TRADE"]
       }
     },
     "37": {
       "name": "RECIPE_ESSENCE",
       "description": "Recipe - có thể craft/require items từ bất kỳ item table nào",
       "field_mappings": {
-        "Material_*": "@all_items"
+        "Material_*": ["EQUIPMENT_ESSENCE","MEDICINE_SUB_TYPE","MATERIAL_SUB_TYPE","DAMAGERUNE_ESSENCE","REVIVESCROLL_ESSENCE","TASKNORMALMATTER_ESSENCE","MINE_ESSENCE","PSTONE_ESSENCE","TASKDICE_ESSENCE","FASHION_ESSENCE","AWARD_ESSENCE","TALENT_SCROLL_ESSENCE","PET_ESSENCE","GACHE_ESSENCE","RITUAL_ESSENCE","QUESTV2_ESSENCE"]
       }
     },
     "45": {
       "name": "MINE_ESSENCE",
       "description": "Mine - có thể require materials từ bất kỳ item table nào",
       "field_mappings": {
-        "Materials_*_ID": "@all_items"
+        "Materials_*_ID": ["EQUIPMENT_ESSENCE","MEDICINE_SUB_TYPE","MATERIAL_SUB_TYPE","DAMAGERUNE_ESSENCE","REVIVESCROLL_ESSENCE","TASKNORMALMATTER_ESSENCE","MINE_ESSENCE","PSTONE_ESSENCE","TASKDICE_ESSENCE","FASHION_ESSENCE","AWARD_ESSENCE","TALENT_SCROLL_ESSENCE","PET_ESSENCE","GACHE_ESSENCE","RITUAL_ESSENCE","QUESTV2_ESSENCE"]
       }
     },
     "58": {
       "name": "TASKDICE_ESSENCE",
       "description": "Task dice - references recipes",
       "field_mappings": {
-        "Recipe_ID": "@recipes_only"
+        "Recipe_ID": ["RECIPE_ESSENCE"]
       }
     },
     "95": {
       "name": "NPC_TRADE_SERVICE",
       "description": "NPC trade - có thể trade items từ bất kỳ item table nào",
       "field_mappings": {
-        "Item_Giving_*": "@all_items",
-        "Item_Getting_*": "@all_items"
+        "Item_Giving_*": ["EQUIPMENT_ESSENCE","MEDICINE_SUB_TYPE","MATERIAL_SUB_TYPE","DAMAGERUNE_ESSENCE","REVIVESCROLL_ESSENCE","TASKNORMALMATTER_ESSENCE","MINE_ESSENCE","PSTONE_ESSENCE","TASKDICE_ESSENCE","FASHION_ESSENCE","AWARD_ESSENCE","TALENT_SCROLL_ESSENCE","PET_ESSENCE","GACHE_ESSENCE","RITUAL_ESSENCE","QUESTV2_ESSENCE"],
+        "Item_Getting_*": ["EQUIPMENT_ESSENCE","MEDICINE_SUB_TYPE","MATERIAL_SUB_TYPE","DAMAGERUNE_ESSENCE","REVIVESCROLL_ESSENCE","TASKNORMALMATTER_ESSENCE","MINE_ESSENCE","PSTONE_ESSENCE","TASKDICE_ESSENCE","FASHION_ESSENCE","AWARD_ESSENCE","TALENT_SCROLL_ESSENCE","PET_ESSENCE","GACHE_ESSENCE","RITUAL_ESSENCE","QUESTV2_ESSENCE"]
       }
     },
     "98": {
       "name": "EQUIP_SOUL_MELD_SERVICE",
       "description": "Equipment soul meld service - references recipes",
       "field_mappings": {
-        "Prescription_*": "@recipes_only"
+        "Prescription_*": ["RECIPE_ESSENCE"]
       }
     },
     "212": {
       "name": "TALENT_SCROLL_ESSENCE",
       "description": "Talent scroll essence - Talent_Scroll_Config is skill/faction ID, not item ID",
       "field_mappings": {
-        "Decomposion_ID": "@talent_scroll_items",
-        "Refine_ID": "@refine_only"
+        "Decomposion_ID": ["TALENT_SCROLL_CONFIG", "TALENT_SCROLL_SKILL"],
+        "Refine_ID": ["REFINE_ESSENCE"]
       }
     },
     "213": {
       "name": "TALENT_SCROLL_CONFIG",
       "description": "Thuộc tính sách",
       "field_mappings": {
-        "Profession_Addon_Skill_*": "@talent_scroll_items"
+        "Profession_Addon_Skill_*": ["TALENT_SCROLL_SKILL"]
       }
     },
     "221": {
       "name": "ITEM_TRADE",
       "description": "Item trade - có thể trade items từ bất kỳ item table nào",
       "field_mappings": {
-        "Item_Giving": "@all_items",
-        "Item_Getting": "@all_items"
+        "Item_Giving": ["EQUIPMENT_ESSENCE","MEDICINE_SUB_TYPE","MATERIAL_SUB_TYPE","DAMAGERUNE_ESSENCE","REVIVESCROLL_ESSENCE","TASKNORMALMATTER_ESSENCE","MINE_ESSENCE","PSTONE_ESSENCE","TASKDICE_ESSENCE","FASHION_ESSENCE","AWARD_ESSENCE","TALENT_SCROLL_ESSENCE","PET_ESSENCE","GACHE_ESSENCE","RITUAL_ESSENCE","QUESTV2_ESSENCE"],
+        "Item_Getting": ["EQUIPMENT_ESSENCE","MEDICINE_SUB_TYPE","MATERIAL_SUB_TYPE","DAMAGERUNE_ESSENCE","REVIVESCROLL_ESSENCE","TASKNORMALMATTER_ESSENCE","MINE_ESSENCE","PSTONE_ESSENCE","TASKDICE_ESSENCE","FASHION_ESSENCE","AWARD_ESSENCE","TALENT_SCROLL_ESSENCE","PET_ESSENCE","GACHE_ESSENCE","RITUAL_ESSENCE","QUESTV2_ESSENCE"]
       }
     },
     "229": {
       "name": "DAILY_SIGN_CONFIG",
       "description": "Daily sign config - phần thưởng điểm danh hàng ngày",
       "field_mappings": {
-        "Awards_*_ID": "@all_items"
+        "Awards_*_ID": ["EQUIPMENT_ESSENCE","MEDICINE_SUB_TYPE","MATERIAL_SUB_TYPE","DAMAGERUNE_ESSENCE","REVIVESCROLL_ESSENCE","TASKNORMALMATTER_ESSENCE","MINE_ESSENCE","PSTONE_ESSENCE","TASKDICE_ESSENCE","FASHION_ESSENCE","AWARD_ESSENCE","TALENT_SCROLL_ESSENCE","PET_ESSENCE","GACHE_ESSENCE","RITUAL_ESSENCE","QUESTV2_ESSENCE"]
       }
     },
     "123": {
       "name": "Table_123",
       "description": "Lookname: Canididates_*_Icon là itemId của vật phẩm",
       "field_mappings": {
-        "Canididates_*_Icon": "@all_items"
+        "Canididates_*_Icon": ["EQUIPMENT_ESSENCE","MEDICINE_SUB_TYPE","MATERIAL_SUB_TYPE","DAMAGERUNE_ESSENCE","REVIVESCROLL_ESSENCE","TASKNORMALMATTER_ESSENCE","MINE_ESSENCE","PSTONE_ESSENCE","TASKDICE_ESSENCE","FASHION_ESSENCE","AWARD_ESSENCE","TALENT_SCROLL_ESSENCE","PET_ESSENCE","GACHE_ESSENCE","RITUAL_ESSENCE","QUESTV2_ESSENCE"]
       }
     },
     "130": {
       "name": "Table_130",
       "description": "Lookname: Candidate_Items_*_Item_ID là itemId của vật phẩm",
       "field_mappings": {
-        "Candidate_Items_*_Item_ID": "@all_items"
+        "Candidate_Items_*_Item_ID": ["EQUIPMENT_ESSENCE","MEDICINE_SUB_TYPE","MATERIAL_SUB_TYPE","DAMAGERUNE_ESSENCE","REVIVESCROLL_ESSENCE","TASKNORMALMATTER_ESSENCE","MINE_ESSENCE","PSTONE_ESSENCE","TASKDICE_ESSENCE","FASHION_ESSENCE","AWARD_ESSENCE","TALENT_SCROLL_ESSENCE","PET_ESSENCE","GACHE_ESSENCE","RITUAL_ESSENCE","QUESTV2_ESSENCE"]
       }
     },
     "59": {
       "name": "Table_59",
       "description": "Lookname: Equips_ID_* là itemId của vật phẩm",
       "field_mappings": {
-        "Equips_ID_*": "@equipment_only"
+        "Equips_ID_*": ["EQUIPMENT_ESSENCE"]
       }
     },
     "68": {
       "name": "Table_68",
       "description": "Lookname: Canididates_*_Icon là itemId của vật phẩm (giống table 123)",
       "field_mappings": {
-        "Canididates_*_Icon": "@all_items"
+        "Canididates_*_Icon": ["EQUIPMENT_ESSENCE","MEDICINE_SUB_TYPE","MATERIAL_SUB_TYPE","DAMAGERUNE_ESSENCE","REVIVESCROLL_ESSENCE","TASKNORMALMATTER_ESSENCE","MINE_ESSENCE","PSTONE_ESSENCE","TASKDICE_ESSENCE","FASHION_ESSENCE","AWARD_ESSENCE","TALENT_SCROLL_ESSENCE","PET_ESSENCE","GACHE_ESSENCE","RITUAL_ESSENCE","QUESTV2_ESSENCE"]
       }
     },
     "70": {
       "name": "Table_70",
       "description": "Lookname: Attribute_* là itemId của vật phẩm",
       "field_mappings": {
-        "Attribute_*": "@all_items"
+        "Attribute_*": ["EQUIPMENT_ESSENCE","MEDICINE_SUB_TYPE","MATERIAL_SUB_TYPE","DAMAGERUNE_ESSENCE","REVIVESCROLL_ESSENCE","TASKNORMALMATTER_ESSENCE","MINE_ESSENCE","PSTONE_ESSENCE","TASKDICE_ESSENCE","FASHION_ESSENCE","AWARD_ESSENCE","TALENT_SCROLL_ESSENCE","PET_ESSENCE","GACHE_ESSENCE","RITUAL_ESSENCE","QUESTV2_ESSENCE"]
       }
     },
     "100": {
       "name": "Table_100",
       "description": "Lookname: Recycle_List_*_Object_ID là itemId của vật phẩm",
       "field_mappings": {
-        "Recycle_List_*_Object_ID": "@all_items"
+        "Recycle_List_*_Object_ID": ["EQUIPMENT_ESSENCE","MEDICINE_SUB_TYPE","MATERIAL_SUB_TYPE","DAMAGERUNE_ESSENCE","REVIVESCROLL_ESSENCE","TASKNORMALMATTER_ESSENCE","MINE_ESSENCE","PSTONE_ESSENCE","TASKDICE_ESSENCE","FASHION_ESSENCE","AWARD_ESSENCE","TALENT_SCROLL_ESSENCE","PET_ESSENCE","GACHE_ESSENCE","RITUAL_ESSENCE","QUESTV2_ESSENCE"]
       }
     },
     "113": {
       "name": "Table_113",
       "description": "Lookname: Droptable_*_Item_ID là itemId của vật phẩm",
       "field_mappings": {
-        "Droptable_*_Item_ID": "@all_items"
+        "Droptable_*_Item_ID": ["EQUIPMENT_ESSENCE","MEDICINE_SUB_TYPE","MATERIAL_SUB_TYPE","DAMAGERUNE_ESSENCE","REVIVESCROLL_ESSENCE","TASKNORMALMATTER_ESSENCE","MINE_ESSENCE","PSTONE_ESSENCE","TASKDICE_ESSENCE","FASHION_ESSENCE","AWARD_ESSENCE","TALENT_SCROLL_ESSENCE","PET_ESSENCE","GACHE_ESSENCE","RITUAL_ESSENCE","QUESTV2_ESSENCE"]
       }
     },
     "124": {
       "name": "Table_124",
       "description": "Lookname: Gem_ID_*_Ordinary_Gem_ID là itemId của vật phẩm",
       "field_mappings": {
-        "Gem_ID_*_Ordinary_Gem_ID": "@gems_only"
+        "Gem_ID_*_Ordinary_Gem_ID": ["GEM_ESSENCE"]
       }
     },
     "132": {
       "name": "Table_132",
       "description": "Lookname: Small_Gift_Baqs_*_Gift_Baq_ID là itemId của vật phẩm",
       "field_mappings": {
-        "Small_Gift_Baqs_*_Gift_Baq_ID": "@all_items"
+        "Small_Gift_Baqs_*_Gift_Baq_ID": ["EQUIPMENT_ESSENCE","MEDICINE_SUB_TYPE","MATERIAL_SUB_TYPE","DAMAGERUNE_ESSENCE","REVIVESCROLL_ESSENCE","TASKNORMALMATTER_ESSENCE","MINE_ESSENCE","PSTONE_ESSENCE","TASKDICE_ESSENCE","FASHION_ESSENCE","AWARD_ESSENCE","TALENT_SCROLL_ESSENCE","PET_ESSENCE","GACHE_ESSENCE","RITUAL_ESSENCE","QUESTV2_ESSENCE"]
       }
     },
     "154": {
       "name": "Table_154",
       "description": "Lookname: Daily_Award_Item, Award_List_*_Item_ID là itemId của vật phẩm",
       "field_mappings": {
-        "Daily_Award_Item": "@all_items",
-        "Award_List_*_Item_ID": "@all_items"
+        "Daily_Award_Item": ["EQUIPMENT_ESSENCE","MEDICINE_SUB_TYPE","MATERIAL_SUB_TYPE","DAMAGERUNE_ESSENCE","REVIVESCROLL_ESSENCE","TASKNORMALMATTER_ESSENCE","MINE_ESSENCE","PSTONE_ESSENCE","TASKDICE_ESSENCE","FASHION_ESSENCE","AWARD_ESSENCE","TALENT_SCROLL_ESSENCE","PET_ESSENCE","GACHE_ESSENCE","RITUAL_ESSENCE","QUESTV2_ESSENCE"],
+        "Award_List_*_Item_ID": ["EQUIPMENT_ESSENCE","MEDICINE_SUB_TYPE","MATERIAL_SUB_TYPE","DAMAGERUNE_ESSENCE","REVIVESCROLL_ESSENCE","TASKNORMALMATTER_ESSENCE","MINE_ESSENCE","PSTONE_ESSENCE","TASKDICE_ESSENCE","FASHION_ESSENCE","AWARD_ESSENCE","TALENT_SCROLL_ESSENCE","PET_ESSENCE","GACHE_ESSENCE","RITUAL_ESSENCE","QUESTV2_ESSENCE"]
       }
     },
     "155": {
       "name": "Table_155",
       "description": "Lookname: Item_IDs_* là itemId của vật phẩm",
       "field_mappings": {
-        "Item_IDs_*": "@all_items"
+        "Item_IDs_*": ["EQUIPMENT_ESSENCE","MEDICINE_SUB_TYPE","MATERIAL_SUB_TYPE","DAMAGERUNE_ESSENCE","REVIVESCROLL_ESSENCE","TASKNORMALMATTER_ESSENCE","MINE_ESSENCE","PSTONE_ESSENCE","TASKDICE_ESSENCE","FASHION_ESSENCE","AWARD_ESSENCE","TALENT_SCROLL_ESSENCE","PET_ESSENCE","GACHE_ESSENCE","RITUAL_ESSENCE","QUESTV2_ESSENCE"]
       }
     },
     "159": {
       "name": "Table_159",
       "description": "Lookname: Element_List_*_Award_Item_* và Element_List_*_Condition_Arg_* là itemId của vật phẩm",
       "field_mappings": {
-        "Element_List_*_Award_Item_1": "@all_items",
-        "Element_List_*_Condition_Arg_1": "@all_items"
+        "Element_List_*_Award_Item_1": ["EQUIPMENT_ESSENCE","MEDICINE_SUB_TYPE","MATERIAL_SUB_TYPE","DAMAGERUNE_ESSENCE","REVIVESCROLL_ESSENCE","TASKNORMALMATTER_ESSENCE","MINE_ESSENCE","PSTONE_ESSENCE","TASKDICE_ESSENCE","FASHION_ESSENCE","AWARD_ESSENCE","TALENT_SCROLL_ESSENCE","PET_ESSENCE","GACHE_ESSENCE","RITUAL_ESSENCE","QUESTV2_ESSENCE"],
+        "Element_List_*_Condition_Arg_1": ["EQUIPMENT_ESSENCE","MEDICINE_SUB_TYPE","MATERIAL_SUB_TYPE","DAMAGERUNE_ESSENCE","REVIVESCROLL_ESSENCE","TASKNORMALMATTER_ESSENCE","MINE_ESSENCE","PSTONE_ESSENCE","TASKDICE_ESSENCE","FASHION_ESSENCE","AWARD_ESSENCE","TALENT_SCROLL_ESSENCE","PET_ESSENCE","GACHE_ESSENCE","RITUAL_ESSENCE","QUESTV2_ESSENCE"]
       }
     },
     "160": {
       "name": "Table_160",
       "description": "Lookname: Gifts_*_ID_Object là itemId của vật phẩm",
       "field_mappings": {
-        "Gifts_*_ID_Object": "@all_items"
+        "Gifts_*_ID_Object": ["EQUIPMENT_ESSENCE","MEDICINE_SUB_TYPE","MATERIAL_SUB_TYPE","DAMAGERUNE_ESSENCE","REVIVESCROLL_ESSENCE","TASKNORMALMATTER_ESSENCE","MINE_ESSENCE","PSTONE_ESSENCE","TASKDICE_ESSENCE","FASHION_ESSENCE","AWARD_ESSENCE","TALENT_SCROLL_ESSENCE","PET_ESSENCE","GACHE_ESSENCE","RITUAL_ESSENCE","QUESTV2_ESSENCE"]
       }
     },
     "161": {
       "name": "Table_161",
       "description": "Lookname: Group_Gifts_*_Gifts_*_ID là itemId của vật phẩm",
       "field_mappings": {
-        "Group_Gifts_*_Gifts_*_ID": "@all_items"
+        "Group_Gifts_*_Gifts_*_ID": ["EQUIPMENT_ESSENCE","MEDICINE_SUB_TYPE","MATERIAL_SUB_TYPE","DAMAGERUNE_ESSENCE","REVIVESCROLL_ESSENCE","TASKNORMALMATTER_ESSENCE","MINE_ESSENCE","PSTONE_ESSENCE","TASKDICE_ESSENCE","FASHION_ESSENCE","AWARD_ESSENCE","TALENT_SCROLL_ESSENCE","PET_ESSENCE","GACHE_ESSENCE","RITUAL_ESSENCE","QUESTV2_ESSENCE"]
       }
     },
     "175": {
       "name": "Table_175",
       "description": "Lookname: Team_Award_*_Item_Info_*_Item_ID là itemId của vật phẩm",
       "field_mappings": {
-        "Team_Award_*_Item_Info_*_Item_ID": "@all_items"
+        "Team_Award_*_Item_Info_*_Item_ID": ["EQUIPMENT_ESSENCE","MEDICINE_SUB_TYPE","MATERIAL_SUB_TYPE","DAMAGERUNE_ESSENCE","REVIVESCROLL_ESSENCE","TASKNORMALMATTER_ESSENCE","MINE_ESSENCE","PSTONE_ESSENCE","TASKDICE_ESSENCE","FASHION_ESSENCE","AWARD_ESSENCE","TALENT_SCROLL_ESSENCE","PET_ESSENCE","GACHE_ESSENCE","RITUAL_ESSENCE","QUESTV2_ESSENCE"]
       }
     }
   },
